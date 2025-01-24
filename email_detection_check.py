@@ -14,7 +14,13 @@ if unseen_text:
  unseen_text=re.sub(',','',unseen_text) 
  unseen_text=vector.transform([unseen_text]) 
  prediction=load.predict(unseen_text) 
- st.write(f"**Yeah, this news is {prediction[0]}**")
+ if prediction=='Real':
+  st.write(f"**Yeah, this news is {prediction[0]} ✔️**")
+ elif prediction=='Fake':
+  st.write(f"**Yeah, this news is {prediction[0]} 😐**")
+  
+  
+ 
 
 else:
  pass
