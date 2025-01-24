@@ -4,7 +4,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 vector=joblib.load('Email_detecion_vector.joblib')
 load=joblib.load("Email_detection.joblib")
-st.title("FACT CHECKER 📰")
+st.title("FACT CHECKER 📰🌎")
 st.header("Write down news here to check: ")
 unseen_text=st.text_input("")
 
